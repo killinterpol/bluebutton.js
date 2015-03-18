@@ -46,7 +46,8 @@
   },
   "dependencies": {
     "xmldom": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "util": "*"
   },
   "devDependencies": {
     "bower": "*",
