@@ -1,6 +1,7 @@
 {
   "document": {
     "date": "2013-07-18T15:18:36Z",
+    "title": "Summary of Care",
     "author": {
       "name": {
         "prefix": null,
@@ -204,6 +205,7 @@
         "family": null
       },
       "relationship": null,
+      "relationship_code": null,
       "address": {
         "street": [],
         "city": null,
@@ -354,6 +356,12 @@
           "code": "2028-9",
           "code_system": "2.16.840.1.113883.6.1",
           "code_system_name": "LOINC",
+          "translation": {
+            "name": null,
+            "code": null,
+            "code_system": null,
+            "code_system_name": null
+          },
           "reference_range": {
             "text": null,
             "low_unit": null,
@@ -371,7 +379,7 @@
         "start": null,
         "end": null
       },
-      "text": null,
+      "text": "Proventil HFA 108 (90 Base) MCG/ACT Inhalation Aerosol Solution",
       "product": {
         "name": "Proventil HFA 108 (90 Base) MCG/ACT Inhalation Aerosol Solution",
         "code": "746763",
