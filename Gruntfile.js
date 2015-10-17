@@ -75,6 +75,7 @@ module.exports = function(grunt) {
           "<%= bb.src %>/parsers/ccda/instructions.js",
           "<%= bb.src %>/parsers/ccda/results.js",
           "<%= bb.src %>/parsers/ccda/medications.js",
+          "<%= bb.src %>/parsers/ccda/payers.js",
           "<%= bb.src %>/parsers/ccda/problems.js",
           "<%= bb.src %>/parsers/ccda/procedures.js",
           "<%= bb.src %>/parsers/ccda/smoking_status.js",
