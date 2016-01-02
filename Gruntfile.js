@@ -17,6 +17,20 @@ module.exports = function(grunt) {
     clean: {
       build: ["<%= bb.build %>"]
     },
+
+    bumpup: {
+        options: {
+            updateProps: {
+                pkg: 'package.json'
+            }
+        },
+        setters: {
+            timestamp: function (oldTimestamp, releaseType, options, buildMeta) {
+                return +new Date();
+            }
+        },
+        file: 'package.json'
+    },
     
     jshint: {
       options: {
@@ -163,6 +177,7 @@ module.exports = function(grunt) {
   require("matchdep").filterDev("grunt-contrib-*").forEach(grunt.loadNpmTasks);
   grunt.loadNpmTasks('grunt-jasmine-node');
   grunt.loadNpmTasks('grunt-umd');
+  grunt.loadNpmTasks('grunt-bumpup');
   
   // Define tasks
   grunt.registerTask("default", [
