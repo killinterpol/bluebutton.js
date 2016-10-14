@@ -19,7 +19,9 @@
       },
       "phone": {
         "work": null
-      }
+      },
+      "manufacturerModelName": null,
+      "softwareName": null
     },
     "documentation_of": [
       {
@@ -165,6 +167,13 @@
     "text": null
   },
   "demographics": {
+    "id": [
+      {
+        "type": "other",
+        "value": "130115235147857",
+        "root": "1.3.6.1.4.1.22812.3.9999341.3"
+      }
+    ],
     "name": {
       "prefix": null,
       "given": [
@@ -184,12 +193,6 @@
       "zip": "60301",
       "country": "US"
     },
-    "phone": {
-      "home": null,
-      "work": null,
-      "mobile": null
-    },
-    "email": null,
     "language": "eng",
     "race": "White",
     "ethnicity": "Not Hispanic or Latino",
@@ -213,13 +216,11 @@
         "zip": null,
         "country": null
       },
-      "phone": {
-        "home": null
-      }
+      "email": "NI",
+      "phone": "NI"
     },
     "provider": {
       "organization": "Primary Care Partners",
-      "phone": "tel:+1-(555)555-1122",
       "address": {
         "street": [
           "Get Well Clinic, 1002 Healthcare Dr"
@@ -228,12 +229,25 @@
         "state": "OR",
         "zip": "97005",
         "country": "US"
+      },
+      "email": "NI",
+      "phone": [
+        {
+          "val": "15555551122",
+          "use": "work"
+        }
+      ]
+    },
+    "email": "NI",
+    "phone": [
+      {
+        "val": "UNK",
+        "use": null
       }
-    }
+    ]
   },
   "encounters": [
     {
-      "date": null,
       "name": null,
       "code": null,
       "code_system": "2.16.840.1.113883.5.4",
@@ -258,7 +272,11 @@
         "code_system_name": null
       },
       "performer": {
-        "name": null,
+        "name": {
+          "prefix": null,
+          "given": [],
+          "family": null
+        },
         "code": null,
         "code_system": null,
         "code_system_name": null
@@ -270,7 +288,8 @@
         "zip": null,
         "country": null,
         "organization": null
-      }
+      },
+      "date": "2013-07-11T11:00:00Z"
     }
   ],
   "functional_statuses": [
@@ -343,13 +362,13 @@
   ],
   "results": [
     {
+      "date": "2013-07-11T00:27:00Z",
       "name": "CO2",
       "code": "UNK",
       "code_system": "2.16.840.1.113883.6.12",
       "code_system_name": "CPT",
       "tests": [
         {
-          "date": "2013-07-11T00:27:00Z",
           "name": "Carbon Dioxide",
           "value": 25.2,
           "unit": "mmol/L",
@@ -368,7 +387,8 @@
             "low_value": null,
             "high_unit": null,
             "high_value": null
-          }
+          },
+          "date": "2013-07-11T00:27:00Z"
         }
       ]
     }
@@ -382,9 +402,9 @@
       "text": "Proventil HFA 108 (90 Base) MCG/ACT Inhalation Aerosol SolutionINHALE 2 PUFFS Every 6 hours PRN wheezing Quantity: 1Active",
       "product": {
         "name": "Proventil HFA 108 (90 Base) MCG/ACT Inhalation Aerosol Solution",
-        "text": "Proventil HFA 108 (90 Base) MCG/ACT Inhalation Aerosol Solution",
         "code": "746763",
         "code_system": "2.16.840.1.113883.6.88",
+        "text": "Proventil HFA 108 (90 Base) MCG/ACT Inhalation Aerosol Solution",
         "translation": {
           "name": "Proventil HFA 108 (90 Base) MCG/ACT Inhalation Aerosol Solution",
           "code": "68258897406",
@@ -500,7 +520,6 @@
   ],
   "procedures": [
     {
-      "date": null,
       "name": null,
       "code": null,
       "code_system": null,
@@ -522,10 +541,16 @@
         "name": null,
         "code": null,
         "code_system": null
-      }
+      },
+      "translation": {
+        "name": null,
+        "code": null,
+        "code_system": null,
+        "code_system_name": null
+      },
+      "date": null
     },
     {
-      "date": null,
       "name": null,
       "code": null,
       "code_system": null,
@@ -547,19 +572,27 @@
         "name": null,
         "code": null,
         "code_system": null
-      }
+      },
+      "translation": {
+        "name": null,
+        "code": null,
+        "code_system": null,
+        "code_system_name": null
+      },
+      "date": null
     }
   ],
-  "smoking_status": {
-    "date": null,
-    "name": "Never smoker",
-    "code": "266919005",
-    "code_system": "2.16.840.1.113883.6.96",
-    "code_system_name": "SNOMED CT"
-  },
+  "smoking_status": [
+    {
+      "name": "Never smoker",
+      "code": "266919005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED CT",
+      "date": null
+    }
+  ],
   "vitals": [
     {
-      "date": "2013-07-11T00:25:00Z",
       "results": [
         {
           "name": "BP Systolic",
@@ -609,7 +642,9 @@
           "value": 2.06,
           "unit": "1"
         }
-      ]
+      ],
+      "date": "2013-07-11T00:25:00Z"
     }
-  ]
+  ],
+  "payers": []
 }

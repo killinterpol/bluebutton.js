@@ -21,7 +21,9 @@
       },
       "phone": {
         "work": "tel:555-555-1002"
-      }
+      },
+      "manufacturerModelName": null,
+      "softwareName": null
     },
     "documentation_of": [
       {
@@ -160,6 +162,18 @@
     "text": null
   },
   "demographics": {
+    "id": [
+      {
+        "type": "other",
+        "value": "1",
+        "root": "2.16.840.1.113883.4.6"
+      },
+      {
+        "type": "ssn",
+        "value": "123-101-5230",
+        "root": "2.16.840.1.113883.4.1"
+      }
+    ],
     "name": {
       "prefix": null,
       "given": [
@@ -180,12 +194,6 @@
       "zip": "97006",
       "country": "US"
     },
-    "phone": {
-      "home": "tel:(816)276-6909",
-      "work": null,
-      "mobile": null
-    },
-    "email": null,
     "language": "eng",
     "race": "White",
     "ethnicity": "Not Hispanic or Latino",
@@ -213,13 +221,16 @@
         "zip": "97006",
         "country": "US"
       },
-      "phone": {
-        "home": "tel:(816)276-6909"
-      }
+      "email": "NI",
+      "phone": [
+        {
+          "val": "8162766909",
+          "use": "home"
+        }
+      ]
     },
     "provider": {
       "organization": "Get Well Clinic",
-      "phone": "tel: 555-555-5000",
       "address": {
         "street": [
           "1002 Healthcare Dr"
@@ -228,12 +239,25 @@
         "state": "OR",
         "zip": "97266",
         "country": "US"
+      },
+      "email": "NI",
+      "phone": [
+        {
+          "val": "5555555000",
+          "use": "work"
+        }
+      ]
+    },
+    "email": "NI",
+    "phone": [
+      {
+        "val": "8162766909",
+        "use": "home"
       }
-    }
+    ]
   },
   "encounters": [
     {
-      "date": "08/06/2012",
       "name": "Outpatient Visit",
       "code": "99212",
       "code_system": "2.16.840.1.113883.6.12",
@@ -277,7 +301,8 @@
         "zip": "97266",
         "country": "US",
         "organization": "Family Medicine Clinic"
-      }
+      },
+      "date": "08/06/2012"
     }
   ],
   "functional_statuses": [
@@ -375,13 +400,13 @@
   "instructions": [],
   "results": [
     {
+      "date": "08/10/2012",
       "name": "CBC WO DIFFERENTIAL",
       "code": "43789009",
       "code_system": "2.16.840.1.113883.6.96",
       "code_system_name": "SNOMED CT",
       "tests": [
         {
-          "date": "08/10/2012",
           "name": "HGB",
           "value": 10.2,
           "unit": "g/dl",
@@ -400,10 +425,10 @@
             "low_value": null,
             "high_unit": null,
             "high_value": null
-          }
+          },
+          "date": "08/10/2012"
         },
         {
-          "date": "08/10/2012",
           "name": "WBC",
           "value": 12.3,
           "unit": "10+3/ul",
@@ -422,10 +447,10 @@
             "low_value": "4.3",
             "high_unit": "10+3/ul",
             "high_value": "10.8"
-          }
+          },
+          "date": "08/10/2012"
         },
         {
-          "date": "08/10/2012",
           "name": "PLT",
           "value": 123,
           "unit": "10+3/ul",
@@ -444,7 +469,8 @@
             "low_value": "150",
             "high_unit": "10+3/ul",
             "high_value": "350"
-          }
+          },
+          "date": "08/10/2012"
         }
       ]
     }
@@ -458,9 +484,9 @@
       "text": "0.09 MG/ACTUAT inhalant solution, 2 puffs",
       "product": {
         "name": "Albuterol 0.09 MG/ACTUAT inhalant solution",
-        "text": "Albuterol 0.09 MG/ACTUAT inhalant solution",
         "code": "573621",
         "code_system": "2.16.840.1.113883.6.88",
+        "text": "Albuterol 0.09 MG/ACTUAT inhalant solution",
         "translation": {
           "name": "Proventil 0.09 MG/ACTUAT inhalant solution",
           "code": "573621",
@@ -557,7 +583,6 @@
   ],
   "procedures": [
     {
-      "date": "08/06/2012",
       "name": "Chest X-Ray",
       "code": "168731009",
       "code_system": "2.16.840.1.113883.6.96",
@@ -581,19 +606,30 @@
         "name": null,
         "code": null,
         "code_system": null
+      },
+      "translation": {
+        "name": null,
+        "code": null,
+        "code_system": null,
+        "code_system_name": null
+      },
+      "date": "08/06/2012"
+    }
+  ],
+  "smoking_status": [
+    {
+      "name": "Former smoker",
+      "code": "8517006",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": null,
+      "date_range": {
+        "start": "05/01/2005",
+        "end": "02/27/2011"
       }
     }
   ],
-  "smoking_status": {
-    "date": null,
-    "name": "Former smoker",
-    "code": "8517006",
-    "code_system": "2.16.840.1.113883.6.96",
-    "code_system_name": null
-  },
   "vitals": [
     {
-      "date": "11/01/2011",
       "results": [
         {
           "name": "Height",
@@ -619,10 +655,10 @@
           "value": 132,
           "unit": "mm[Hg]"
         }
-      ]
+      ],
+      "date": "11/01/2011"
     },
     {
-      "date": "08/06/2012",
       "results": [
         {
           "name": "Height",
@@ -648,7 +684,9 @@
           "value": 145,
           "unit": "mm[Hg]"
         }
-      ]
+      ],
+      "date": "08/06/2012"
     }
-  ]
+  ],
+  "payers": []
 }

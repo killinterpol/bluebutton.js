@@ -21,7 +21,9 @@
       },
       "phone": {
         "work": "tel:555-555-1002"
-      }
+      },
+	  "manufacturerModelName": null,
+	  "softwareName": null
     },
     "documentation_of": [
       {
@@ -152,6 +154,18 @@
     "text": null
   },
   "demographics": {
+    "id": [
+      {
+        "type": "other",
+        "value": "998991",
+        "root": "2.16.840.1.113883.19.5.99999.2"
+      },
+      {
+        "type": "ssn",
+        "value": "111-00-2330",
+        "root": "2.16.840.1.113883.4.1"
+      }
+    ],
     "name": {
       "prefix": null,
       "given": [
@@ -171,12 +185,6 @@
       "zip": "40299",
       "country": "US"
     },
-    "phone": {
-      "home": "tel:(502)649-6327",
-      "work": null,
-      "mobile": null
-    },
-    "email": null,
     "language": "spa",
     "race": "Asian",
     "ethnicity": "Not Hispanic or Latino",
@@ -204,13 +212,16 @@
         "zip": "1862",
         "country": "US"
       },
-      "phone": {
-        "home": "tel:(978)766-5553"
-      }
+      "email": "NI",
+      "phone": [
+        {
+          "val": "9787665553",
+          "use": "home"
+        }
+      ]
     },
     "provider": {
       "organization": "Community Health and Hospitals",
-      "phone": "tel: 555-555-5000",
       "address": {
         "street": [
           "1001 Village Avenue"
@@ -219,12 +230,25 @@
         "state": "OR",
         "zip": "99123",
         "country": "US"
+      },
+      "email": "NI",
+      "phone": [
+        {
+          "val": "5555555000",
+          "use": "work"
+        }
+      ]
+    },
+    "email": "NI",
+    "phone": [
+      {
+        "val": "5026496327",
+        "use": "mobile"
       }
-    }
+    ]
   },
   "encounters": [
     {
-      "date": "2010-03-31T10:00:00Z",
       "name": "Office/outpatient visit, est",
       "code": "99212",
       "code_system": "2.16.840.1.113883.6.12",
@@ -249,7 +273,11 @@
         "code_system_name": "ICD-10-CM"
       },
       "performer": {
-        "name": null,
+        "name": {
+          "prefix": null,
+          "given": [],
+          "family": null
+        },
         "code": null,
         "code_system": null,
         "code_system_name": null
@@ -261,10 +289,10 @@
         "zip": null,
         "country": null,
         "organization": null
-      }
+      },
+      "date": "2010-03-31T10:00:00Z"
     },
     {
-      "date": "2010-06-06T10:00:00Z",
       "name": "Office/outpatient visit, est",
       "code": "99213",
       "code_system": "2.16.840.1.113883.6.12",
@@ -284,7 +312,11 @@
         "code_system_name": "ICD-9-CM"
       },
       "performer": {
-        "name": null,
+        "name": {
+          "prefix": null,
+          "given": [],
+          "family": null
+        },
         "code": null,
         "code_system": null,
         "code_system_name": null
@@ -296,10 +328,10 @@
         "zip": null,
         "country": null,
         "organization": null
-      }
+      },
+      "date": "2010-06-06T10:00:00Z"
     },
     {
-      "date": "2010-06-08T10:00:00Z",
       "name": "Initial inpatient consult",
       "code": "99251",
       "code_system": "2.16.840.1.113883.6.12",
@@ -319,7 +351,11 @@
         "code_system_name": "ICD-10-CM"
       },
       "performer": {
-        "name": null,
+        "name": {
+          "prefix": null,
+          "given": [],
+          "family": null
+        },
         "code": null,
         "code_system": null,
         "code_system_name": null
@@ -331,10 +367,10 @@
         "zip": null,
         "country": null,
         "organization": null
-      }
+      },
+      "date": "2010-06-08T10:00:00Z"
     },
     {
-      "date": "2010-06-25T10:00:00Z",
       "name": "Office/outpatient visit, est",
       "code": "99212",
       "code_system": "2.16.840.1.113883.6.12",
@@ -348,7 +384,11 @@
         "code_system_name": null
       },
       "performer": {
-        "name": null,
+        "name": {
+          "prefix": null,
+          "given": [],
+          "family": null
+        },
         "code": null,
         "code_system": null,
         "code_system_name": null
@@ -360,10 +400,10 @@
         "zip": null,
         "country": null,
         "organization": null
-      }
+      },
+      "date": "2010-06-25T10:00:00Z"
     },
     {
-      "date": "2010-10-27T10:00:00Z",
       "name": "Office/outpatient visit, est",
       "code": "99213",
       "code_system": "2.16.840.1.113883.6.12",
@@ -377,7 +417,11 @@
         "code_system_name": "ICD-9-CM"
       },
       "performer": {
-        "name": null,
+        "name": {
+          "prefix": null,
+          "given": [],
+          "family": null
+        },
         "code": null,
         "code_system": null,
         "code_system_name": null
@@ -389,7 +433,8 @@
         "zip": null,
         "country": null,
         "organization": null
-      }
+      },
+      "date": "2010-10-27T10:00:00Z"
     }
   ],
   "functional_statuses": [],
@@ -465,13 +510,13 @@
   "instructions": [],
   "results": [
     {
+      "date": "2010-03-31T10:00:00Z",
       "name": "Lipid Panel",
       "code": "16254007",
       "code_system": "2.16.840.1.113883.6.96",
       "code_system_name": "SNOMED-CT",
       "tests": [
         {
-          "date": "2010-03-31T10:00:00Z",
           "name": "HDLc SerPl-sCnc",
           "value": 55,
           "unit": "mg/dL",
@@ -490,10 +535,10 @@
             "low_value": null,
             "high_unit": null,
             "high_value": null
-          }
+          },
+          "date": "2010-03-31T10:00:00Z"
         },
         {
-          "date": "2010-03-31T10:00:00Z",
           "name": "LDLc SerPl-mCnc",
           "value": 85,
           "unit": "mg/dL",
@@ -512,10 +557,10 @@
             "low_value": null,
             "high_unit": null,
             "high_value": null
-          }
+          },
+          "date": "2010-03-31T10:00:00Z"
         },
         {
-          "date": "2010-03-31T10:00:00Z",
           "name": "Cholest SerPl-mCnc",
           "value": 165,
           "unit": "mg/dL",
@@ -534,10 +579,10 @@
             "low_value": null,
             "high_unit": null,
             "high_value": null
-          }
+          },
+          "date": "2010-03-31T10:00:00Z"
         },
         {
-          "date": "2010-03-31T10:00:00Z",
           "name": "Trigl SerPl Calc-mCnc",
           "value": 125,
           "unit": "mg/dL",
@@ -556,7 +601,8 @@
             "low_value": null,
             "high_unit": null,
             "high_value": null
-          }
+          },
+          "date": "2010-03-31T10:00:00Z"
         }
       ]
     }
@@ -570,9 +616,9 @@
       "text": null,
       "product": {
         "name": "Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
-        "text": "Antihypertensive combinations + Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
         "code": "858828",
         "code_system": "2.16.840.1.113883.6.88",
+        "text": "Antihypertensive combinations + Enalapril Maleate 10 MG / Hydrochlorothiazide 25 MG Oral Tablet",
         "translation": {
           "name": null,
           "code": null,
@@ -634,9 +680,9 @@
       "text": null,
       "product": {
         "name": "Lisinopril 10 MG Oral Tablet",
-        "text": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet",
         "code": "314076",
         "code_system": "2.16.840.1.113883.6.88",
+        "text": "ACE inhibitor or ARB + Lisinopril 10 MG Oral Tablet",
         "translation": {
           "name": null,
           "code": null,
@@ -790,7 +836,6 @@
   ],
   "procedures": [
     {
-      "date": "2010-03-31T10:00:00Z",
       "name": "X-ray exam of spine",
       "code": "72010",
       "code_system": "2.16.840.1.113883.6.12",
@@ -812,10 +857,16 @@
         "name": null,
         "code": null,
         "code_system": null
-      }
+      },
+      "translation": {
+        "name": "Diagnostic radiography of spine, survey study",
+        "code": "91583001",
+        "code_system": "2.16.840.1.113883.6.96",
+        "code_system_name": "SNOMED-CT"
+      },
+      "date": "2010-03-31T10:00:00Z"
     },
     {
-      "date": "2010-06-06T10:00:00Z",
       "name": "Diagnostic colonoscopy",
       "code": "45378",
       "code_system": "2.16.840.1.113883.6.12",
@@ -837,10 +888,16 @@
         "name": null,
         "code": null,
         "code_system": null
-      }
+      },
+      "translation": {
+        "name": "Colon ca scrn not hi rsk ind",
+        "code": "G0121",
+        "code_system": "2.16.840.1.113883.6.13",
+        "code_system_name": "HCPCS"
+      },
+      "date": "2010-06-06T10:00:00Z"
     },
     {
-      "date": "2010-06-06T10:00:00Z",
       "name": "PET img whbd ring dx colorec",
       "code": "G0213",
       "code_system": "2.16.840.1.113883.6.13",
@@ -862,10 +919,16 @@
         "name": null,
         "code": null,
         "code_system": null
-      }
+      },
+      "translation": {
+        "name": "Malignant neoplasm of colon",
+        "code": "C18",
+        "code_system": "2.16.840.1.113883.6.90",
+        "code_system_name": "ICD-10-CM"
+      },
+      "date": "2010-06-06T10:00:00Z"
     },
     {
-      "date": "2010-06-06T10:00:00Z",
       "name": "Medical nutrition, indiv, in",
       "code": "97802",
       "code_system": "2.16.840.1.113883.6.12",
@@ -887,10 +950,16 @@
         "name": null,
         "code": null,
         "code_system": null
-      }
+      },
+      "translation": {
+        "name": "Nutritional counseling, diet",
+        "code": "S9470",
+        "code_system": "2.16.840.1.113883.6.13",
+        "code_system_name": "HCPCS"
+      },
+      "date": "2010-06-06T10:00:00Z"
     },
     {
-      "date": "2010-06-06T10:00:00Z",
       "name": "Exercise class",
       "code": "S9451",
       "code_system": "2.16.840.1.113883.6.13",
@@ -912,19 +981,27 @@
         "name": null,
         "code": null,
         "code_system": null
-      }
+      },
+      "translation": {
+        "name": "Dietary counseling and surveillance",
+        "code": "Z71.3",
+        "code_system": "2.16.840.1.113883.6.90",
+        "code_system_name": "ICD-10-CM"
+      },
+      "date": "2010-06-06T10:00:00Z"
     }
   ],
-  "smoking_status": {
-    "date": null,
-    "name": "Never smoker (Never Smoked)",
-    "code": "266919005",
-    "code_system": "2.16.840.1.113883.6.96",
-    "code_system_name": "SNOMED-CT"
-  },
+  "smoking_status": [
+    {
+      "name": "Never smoker (Never Smoked)",
+      "code": "266919005",
+      "code_system": "2.16.840.1.113883.6.96",
+      "code_system_name": "SNOMED-CT",
+      "date": "2010-03-31T10:00:00Z"
+    }
+  ],
   "vitals": [
     {
-      "date": "2010-03-31T10:00:00Z",
       "results": [
         {
           "name": "BP Diastolic",
@@ -950,10 +1027,10 @@
           "value": 150,
           "unit": "mm[Hg]"
         }
-      ]
+      ],
+      "date": "2010-03-31T10:00:00Z"
     },
     {
-      "date": "2010-06-06T10:00:00Z",
       "results": [
         {
           "name": "BMI",
@@ -963,10 +1040,10 @@
           "value": 21.2,
           "unit": "kg/m2"
         }
-      ]
+      ],
+      "date": "2010-06-06T10:00:00Z"
     },
     {
-      "date": "2010-10-27T10:00:00Z",
       "results": [
         {
           "name": "BP Diastolic",
@@ -992,7 +1069,9 @@
           "value": 130,
           "unit": "mm[Hg]"
         }
-      ]
+      ],
+      "date": "2010-10-27T10:00:00Z"
     }
-  ]
+  ],
+  "payers": []
 }
