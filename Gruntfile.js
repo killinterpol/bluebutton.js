@@ -34,7 +34,8 @@ module.exports = function(grunt) {
     
     jshint: {
       options: {
-        jshintrc: ".jshintrc"
+        jshintrc: ".jshintrc",
+        reporterOutput: ""
       },
       beforeconcat: {
         src: ["<%= bb.src %>/{,*/}*.js"]
